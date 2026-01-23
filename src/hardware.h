@@ -20,6 +20,7 @@ namespace Hardware
     {
         // Define your ports here
         // Example: LED = (uint8_t)GPIO::Port::D0,
+        Relay = (uint8_t)GPIO::Port::D5
     };
 
 

@@ -23,7 +23,7 @@ void setup()
     Serial.begin(9600);
 #endif
     Hardware::init();
-    Flash::init();
+    // Flash::init();
 }
 
 void loop()

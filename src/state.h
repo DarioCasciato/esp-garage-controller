@@ -11,6 +11,7 @@ namespace State
 {
     enum States : uint8_t
     {
+        st_connect,
         st_idle,
         st_error
     };
@@ -18,6 +19,13 @@ namespace State
     /// @brief State driver function
     ///
     void stateDriver();
+
+    /// @brief Handler for the WiFi Connect state
+    ///
+    void stateConnectWifi();
+
+    /// @brief Handler for the MQTT Connect state
+    void stateConnectMQTT();
 
     /// @brief Handler for the Idle state
     ///

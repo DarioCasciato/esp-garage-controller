@@ -14,7 +14,8 @@ namespace Hardware
 
     void init() // Initialize hardware, function is called once on startup
     {
-
+        pinMode((uint8_t)Port::Relay, OUTPUT);
+        GPIO::setPort(Port::Relay, LOW);
     }
 
     void updateHardware() // Fetch hardware values, function is called every loop
