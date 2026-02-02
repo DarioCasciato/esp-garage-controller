@@ -12,6 +12,7 @@ namespace State
     enum States : uint8_t
     {
         st_connect,
+        st_connect_mqtt,
         st_idle,
         st_error
     };

@@ -30,6 +30,7 @@ namespace State
         {
         case State::st_connect: stateConnectWifi(); break;
         case State::st_idle: stateIdle(); break;
+        case State::st_connect_mqtt: stateConnectMQTT(); break;
         case State::st_error: stateError(); break;
 
         default:    // catch invalid state (implement safety backup)
@@ -51,7 +52,7 @@ namespace State
 
         if(Wifi::establish(WIFI_SSID, WIFI_PASSWORD))
         {
-            State::state = States::st_idle;
+            State::state = States::st_connect_mqtt;
             Logging::log("WiFi connected successfully.");
         }
 
